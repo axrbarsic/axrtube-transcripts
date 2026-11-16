@@ -1,0 +1,15 @@
+{
+  "name": "axrtube-transcripts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mobile PWA that hunts full YouTube transcripts and turns comments into a readable, replyable feed.",
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "validate": "node scripts/validate-artifact.mjs",
+    "test": "for t in scripts/test*.mjs; do node \"$t\" || exit 1; done",
+    "deploy": "bash scripts/deploy-cloudflare.sh"
+  },
+  "engines": { "node": ">=20" }
+}
